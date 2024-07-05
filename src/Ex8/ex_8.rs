@@ -12,9 +12,7 @@ fn main() {
     io::stdin().read_line(&mut input_b).expect("Failed to read input");
     let b: f64 = input_b.trim().parse().expect("Invalid input. Please enter a valid number.");
 
-    let sum = a + b;
-    let product = a * b;
-    
-    println!("Sum: {}", sum);
-    println!("Product: {}", product);
+    let smallest = if a < b { a } else { b };
+
+    println!("Smallest number is {}", smallest);
 }
